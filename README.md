@@ -1,6 +1,6 @@
 ## IP2Location Nmap script
 
-This IP2Location Nmap script provides a fast lookup of country, region, city, latitude, longitude, ZIP code, time zone, ISP, domain name, connection type, IDD code, area code, weather station code, station name, mcc, mnc, mobile brand, elevation, and usage type from IP address by using IP2Location database with IP2Location Lua Package. 
+This IP2Location Nmap script provides a fast lookup of country, region, city, latitude, longitude, ZIP code, time zone, ISP, domain name, connection type, IDD code, area code, weather station code, station name, mcc, mnc, mobile brand, elevation, and usage type from IP address by using the IP2Location Lua Package. 
 
 The database will be updated in monthly basis for the greater accuracy. Free LITE databases are available at <https://lite.ip2location.com/> upon registration.
 
