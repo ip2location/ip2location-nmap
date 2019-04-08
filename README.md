@@ -10,13 +10,16 @@ Please take note that this script only support the IPV4 IP address at the moment
 
 ## Installation
 
-Download and unzip the folder. Then copy the ip-geolocation-ip2location.nse to your Nmap installation directory/scripts. Next get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) and copy it to your Nmap installation directory/nselib. Download the database from https://lite.ip2location.com/ for free version or [https://www.ip2location.com](https://www.ip2location.com/) for paid version.
+1. Download and unzip the package. 
+2. Copy the ip-geolocation-ip2location.nse to your Nmap installation directory/scripts. 
+3. Get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) & [BigNum library](https://github.com/user-none/lua-nums) and copy it to your Nmap installation directory/nselib. 
+4. Download the database from https://lite.ip2location.com/ for free version or [https://www.ip2location.com](https://www.ip2location.com/) for paid version.
 
 ## Usage
 
 `nmap --script ip-geolocation-ip2location <target> --script-args ip-geolocation-ip2location.ip2location_db=<database_path>`
 
-Replace the <target> with the IP Address that you wish to search and the <database_path> with the IP2Location database file path in your computer. Remember to put double backslashes (\\\\) instead of single backslash(\\) in the path.
+Replace the  `<target>` with the IP Address that you wish to search and the `<database_path>` with the IP2Location database file path in your computer. Remember to put double backslashes (\\\\) instead of single backslash(\\) in the path.
 
 ## Parameters
 
