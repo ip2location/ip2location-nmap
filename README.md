@@ -26,11 +26,11 @@ However, if the Luarocks is not installed, or you do not prefer to install the L
 
 1. Download and unzip the package. 
 
-2. Copy the ip-geolocation-ip2location.nse to your Nmap program directory/scripts. 
-
-3. Get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) & [BigNum library](https://github.com/user-none/lua-nums) and copy it to your Nmap installation directory/nselib. 
+2. Copy the ip-geolocation-ip2location.nse to your Nmap program directory/scripts.
 
    Note: The default Nmap program directory for Linux user should be under /usr/share/, for example /usr/share/nmap. For Windows user, the Nmap directory should be C:\Program Files (x86)\Nmap.
+
+3. Get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) & [BigNum library](https://github.com/user-none/lua-nums) and copy it to your Nmap program directory/nselib. 
 
 4. Download the database from https://lite.ip2location.com/ for free version or [https://www.ip2location.com](https://www.ip2location.com/) for paid version.
 
