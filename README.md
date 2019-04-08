@@ -16,7 +16,7 @@ Download and unzip the folder. Then copy the ip-geolocation-ip2location.nse to y
 
 `nmap --script ip-geolocation-ip2location <target> --script-args ip-geolocation-ip2location.ip2location_db=<database_path>`
 
-Replace the <target> with the IP Address that you wish to search and the <database_path> with the IP2Location database file path in your computer. Remember to put double backslashes (\\\\) instead of single backslash(\\) in the path.
+Replace the `<target>` with the IP Address that you wish to search and the `<database_path>` with the IP2Location database file path in your computer. Remember to put double backslashes (\\\\) instead of single backslash(\\) in the path.
 
 ## Parameters
 
