@@ -2,11 +2,11 @@
 
 This IP2Location Nmap script provides a fast lookup of country, region, city, latitude, longitude, ZIP code, time zone, ISP, domain name, connection type, IDD code, area code, weather station code, station name, mcc, mnc, mobile brand, elevation, usage type, address type and IAB category from IP address by using the IP2Location Lua Package. 
 
-The database will be updated in monthly basis for the greater accuracy. Free LITE databases are available at <https://lite.ip2location.com/> upon registration.
+The database will be updated on a monthly basis for greater accuracy. Free LITE databases are available at <https://lite.ip2location.com/> upon registration.
 
 The paid databases are available at [https://www.ip2location.com](https://www.ip2location.com/) under Premium subscription package.
 
-Please take note that this script only support the IPV4 IP address at the moment. The IPV6 IP address will be supported in future.
+Both IPv4 and IPv6 are supported.
 
 ## Installation
 
@@ -30,7 +30,7 @@ However, if the Luarocks is not installed, or you do not prefer to install the L
 
    Note: The default Nmap program directory for Linux user should be under /usr/share/, for example /usr/share/nmap. For Windows user, the Nmap directory should be C:\Program Files (x86)\Nmap.
 
-3. Get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) & [BigNum library](https://github.com/user-none/lua-nums) and copy it to your Nmap program directory/nselib. 
+3. Get the [ip2location.lua](https://github.com/ip2location/ip2location-lua/blob/master/ip2location.lua) & [BigNum library](https://github.com/user-none/lua-nums) and copy it to your Nmap program directory/nselib.
 
 4. Download the database from https://lite.ip2location.com/ for free version or [https://www.ip2location.com](https://www.ip2location.com/) for paid version.
 
@@ -50,4 +50,4 @@ Indicates the path of the database file to use.
 
 # Copyright
 
-Copyright (C) 2021 by IP2Location.com, [support@ip2location.com](mailto:support@ip2location.com)
+Copyright (C) 2022 by IP2Location.com, [support@ip2location.com](mailto:support@ip2location.com)

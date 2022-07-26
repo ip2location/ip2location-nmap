@@ -3,13 +3,14 @@ local nmap = require "nmap"
 local stdnse = require "stdnse"
 
 description = [[
-Use IP2Location geolocation database to lookup the geolocation information with IP2Location Lua Package. It can be used to determine country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather, MCC, MNC, mobile brand name, elevation and usage type that any IP address or hostname originates from. https://www.ip2location.com
+Use IP2Location geolocation database to lookup the geolocation information with IP2Location Lua Package. It can be used to determine country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather, MCC, MNC, mobile brand name, elevation, usage type, address type and IAB category that any IP address or hostname originates from. https://www.ip2location.com
 
-The database will be updated in monthly basis for the greater accuracy. Free LITE databases are available at https://lite.ip2location.com/ upon registration.
+The database will be updated on a monthly basis for greater accuracy. Free LITE databases are available at https://lite.ip2location.com/ upon registration.
 
 The paid databases are available at https://www.ip2location.com under Premium subscription package.
 
-Please take note that this script only support the IPV4 IP address at the moment. The IPV6 IP address will be supported in future.
+Both IPv4 and IPv6 are supported.
+
 ]]
 
 ---
@@ -40,6 +41,8 @@ Please take note that this script only support the IPV4 IP address at the moment
 -- mobilebrand: N/A
 -- elevation: 0
 -- usagetype: N/A
+-- addresstype: N/A
+-- category: N/A
 
 author = "IP2Location"
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
@@ -47,11 +50,11 @@ categories = {"discovery","external","safe"}
 
 
 hostrule = function(host)
-  if nmap.address_family() ~= "inet" then
-    stdnse.verbose1("Only IPV4 address is supported at the moment.")
-    -- return false
-    return nil
-  end
+--   if nmap.address_family() ~= "inet" then
+--     stdnse.verbose1("Only IPV4 address is supported at the moment.")
+     -- return false
+--     return nil
+--   end
   
   return true
 end
@@ -152,6 +155,16 @@ action = function(host,port)
     print("usagetype: N/A")
   else
     print("usagetype: " .. result.usagetype)
+  end
+  if ((result.addresstype) == "This parameter is unavailable for selected data file. Please upgrade the data file.") then 
+    print("addresstype: N/A")
+  else
+    print("addresstype: " .. result.addresstype)
+  end
+  if ((result.category) == "This parameter is unavailable for selected data file. Please upgrade the data file.") then 
+    print("category: N/A")
+  else
+    print("category: " .. result.category)
   end
 
 end
