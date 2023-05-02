@@ -3,7 +3,7 @@ local nmap = require "nmap"
 local stdnse = require "stdnse"
 
 description = [[
-Use IP2Location geolocation database to lookup the geolocation information with IP2Location Lua Package. It can be used to determine country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather, MCC, MNC, mobile brand name, elevation, usage type, address type and IAB category that any IP address or hostname originates from. https://www.ip2location.com
+Use IP2Location geolocation database to lookup the geolocation information with IP2Location Lua Package. It can be used to determine country, region, city, coordinates, zip code, time zone, ISP, domain name, connection type, area code, weather, MCC, MNC, mobile brand name, elevation, usage type, address type, IAB category, district, autonomous system number (ASN) and autonomous system (AS) that any IP address or hostname originates from. https://www.ip2location.com
 
 The database will be updated on a monthly basis for greater accuracy. Free LITE databases are available at https://lite.ip2location.com/ upon registration.
 
@@ -43,6 +43,9 @@ Both IPv4 and IPv6 are supported.
 -- usagetype: N/A
 -- addresstype: N/A
 -- category: N/A
+-- district: N/A
+-- asn: N/A
+-- as: N/A
 
 author = "IP2Location"
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
@@ -165,6 +168,21 @@ action = function(host,port)
     print("category: N/A")
   else
     print("category: " .. result.category)
+  end
+  if ((result.district) == "This parameter is unavailable for selected data file. Please upgrade the data file.") then 
+    print("district: N/A")
+  else
+    print("district: " .. result.district)
+  end
+  if ((result.asn) == "This parameter is unavailable for selected data file. Please upgrade the data file.") then 
+    print("asn: N/A")
+  else
+    print("asn: " .. result.asn)
+  end
+  if ((result.as) == "This parameter is unavailable for selected data file. Please upgrade the data file.") then 
+    print("as: N/A")
+  else
+    print("as: " .. result.as)
   end
 
 end
